@@ -1,0 +1,90 @@
+.taxi-container{
+    padding: 80px 0;
+}
+
+.taxi-card{
+    max-width: 700px;
+    margin: auto;
+    background-color: #efefef;
+    padding: 40px;
+    border-radius: 18px;
+}
+
+.taxi-title{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.taxi-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.taxi-input{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 10px 15px;
+}
+
+.taxi-icon {
+    margin-right: 10px;
+    color: #3BC371;
+}
+
+.taxi-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.taxi-row {
+    display: flex;
+    gap: 15px;
+}
+
+.taxi-row input,
+.taxi-row select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: white;
+}
+
+textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.taxi-btn {
+    background: #3BC371;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.taxi-btn:hover {
+    background: black;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .taxi-row {
+        flex-direction: column;
+    }
+}

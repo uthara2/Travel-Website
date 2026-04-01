@@ -1,0 +1,114 @@
+/* SECTION */
+.notifications-page {
+  position: relative;
+  z-index: 1;
+  background-color: #EFEFEF;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* BACKGROUND SHAPE (optional if you want same style) */
+.notifications-page .shape {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* TITLE */
+.notifications-page h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* CARD CONTAINER */
+.notification-card {
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+  background: white;
+  padding: 18px 20px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT (smooth like your site vibe) */
+.notification-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* UNREAD STYLE */
+.notification-card.unread {
+  background: #e6f4ea; /* soft green tint */
+  border-left: 5px solid #3CB371;
+  font-weight: 500;
+}
+
+/* MESSAGE TEXT */
+.notification-card p {
+  margin: 0;
+  flex: 1;
+  cursor: pointer;
+  color: #444;
+}
+
+/* BUTTON */
+.notification-card button {
+  margin-left: 15px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20rem;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* BUTTON HOVER */
+.notification-card button:hover {
+  background-color: #e04848;
+}
+
+/* EMPTY STATE */
+.notifications-page p {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+}
+
+/* SPACING HELPERS (reuse your system) */
+.divider {
+  width: 100%;
+  height: 120px;
+}
+
+.divider-sm {
+  width: 100%;
+  height: 50px;
+}
+
+/* ANIMATION (optional aesthetic touch) */
+.notification-card {
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

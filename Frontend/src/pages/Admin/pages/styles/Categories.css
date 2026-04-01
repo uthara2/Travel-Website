@@ -1,0 +1,113 @@
+/* Page Wrapper */
+.categories-page {
+  font-family: "Manrope", sans-serif;
+}
+
+/* Header */
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.categories-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Form Card */
+.category-form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* Form Group */
+.category-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.category-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.category-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+.category-form input:focus {
+  border-color: #3CB371;
+  box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.15);
+}
+
+/* Button */
+.category-btn {
+  background: #3CB371;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-btn:hover {
+  background: black;
+}
+
+/* Table Card */
+.categories-table {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.categories-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.categories-table th,
+.categories-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* Action Buttons */
+.category-edit-btn,
+.category-delete-btn {
+  background: #3CB371;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin-right: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-edit-btn:hover,
+.category-delete-btn:hover {
+  background: black;
+}
+
+/* Empty Text */
+.empty-text {
+  color: #767676;
+  padding: 10px 0;
+}

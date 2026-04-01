@@ -1,0 +1,123 @@
+/* DistrictDetails.css */
+
+/* ===============================
+   GLOBAL PAGE
+================================= */
+.district-details-section {
+  font-family: "Manrope", sans-serif;
+  background: #f9f9f9;
+  color: #1f2937;
+  padding: 60px 20px;
+}
+
+.district-details-section h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.district-details-section .heading-wrapper {
+  background: linear-gradient(135deg, #3cb371, #2e8b57);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.district-details-section .text-muted {
+  font-size: 16px;
+  margin-bottom: 40px;
+  display: block;
+  text-align: center;
+}
+
+/* ===============================
+   LOADING / EMPTY
+================================= */
+.district-details-section .loading,
+.district-details-section .empty-state {
+  text-align: center;
+  font-size: 18px;
+  color: #6b7280;
+  padding: 100px 0;
+}
+
+/* ===============================
+   DESTINATION CARD
+================================= */
+.featured-destination-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-destination-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.featured-destination-card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.overlay-content h4 {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.overlay-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ===============================
+   LINK STYLING
+================================= */
+.trip-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 992px) {
+  .featured-destination-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-destination-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-destination-card img {
+    height: 180px;
+  }
+}

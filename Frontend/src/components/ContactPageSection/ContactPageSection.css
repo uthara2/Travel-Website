@@ -1,0 +1,35 @@
+.contact-page-section {
+    position: relative;
+    z-index: 1;
+}
+
+.maps-section {
+    background-color: #EFEFEF;
+}
+
+.maps-section iframe {
+    border: 0 !important;
+    width: 100%;
+    height: 800px;
+}
+
+.contact-form-wrapper {
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 50px;
+    background-color: #EFEFEF;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 50px);
+    font-family: "Manrope";
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: #161920;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.67;
+    color: #767676;
+}

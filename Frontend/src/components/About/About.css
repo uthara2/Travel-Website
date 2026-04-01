@@ -1,0 +1,150 @@
+.divider{
+    width: 100%;
+    height: 80px;
+}
+.about-company-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-thumbnail {
+    position: relative; 
+    width: 100%;
+}
+
+.shape{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.shape img{
+    max-width: 300px;
+    width: 100%;
+}
+
+.about-company-section .row {
+    min-height: 500px;
+}
+
+.first-img {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.first-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* optional but looks premium */
+}
+
+.sub-title{
+    font-family: "Montez";
+    color: #3CB371;
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.section-heading h2{
+    font-family: "Manrope";
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.section-heading h4{
+    font-family: "Manrope";
+    margin-bottom: 8px;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.about-card-sm {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.about-card-sm p{
+    color: #767676;
+    font-size: 16px;
+    font-family: "Manrope";
+}
+
+.about-card-sm .icon{
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: black;
+    background-color: #EFEFEF;
+    transition: all .35s ease;
+    font-size: 2rem;
+}
+
+.about-card-sm .icon::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #EFEFEF;
+    bottom: -6px;
+    right: -6px;
+    z-index: -1;
+    transition: all .35s ease;
+}
+
+.about-card-sm .icon:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #3CB371;
+    z-index: -5;
+    transition: transform .35s ease;
+}
+
+.about-card-sm:hover .icon::after {
+    transform: translate(-2px, -2px);
+} 
+
+.btn-primary-custom {
+    background-color: #3CB371;
+    color: white;
+    display: inline-flex;
+    background:#3CB371;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    gap: 6px;
+    cursor: pointer;
+    border:none;
+    padding:15px 25px;
+    border-radius:80px;
+    font-weight:700;
+    transition: all .35s ease;
+}
+
+.btn-primary-custom:hover{
+    background-color: black;
+    color: #EFEFEF;
+}

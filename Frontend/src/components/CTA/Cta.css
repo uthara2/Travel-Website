@@ -1,0 +1,49 @@
+.cta-wrapper {
+    background-color: #3CB371;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-image: url('../../assets/cta2.png');
+    margin-top: 100px;
+}
+
+.cta-wrapper .airplane-img {
+    position: absolute;
+    top: 24%;
+    right: 8%;
+    z-index: -1;
+    transform: translate(0px, -38.8193px);
+    will-change: transform;
+}
+
+.download-btn.active, .download-btn:hover, .download-btn:focus {
+    background-color: #161920;
+    border-color: #161920;
+    color: white;
+}
+
+.download-btn {
+    padding: 12px 26px 14px;
+    border-radius: 8rem;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+    transition: all .35s ease;
+}
+
+.delay-12 { animation-delay: 1.2s; }
+.delay-1 { animation-delay: 1.0s; }
+.delay-08 { animation-delay: 0.8s; }
+.delay-06 { animation-delay: 0.6s; }
+.delay-04 { animation-delay: 0.4s; }
+.delay-02 { animation-delay: 0.2s; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,107 @@
+/* Page Wrapper */
+.update-page {
+  min-height: 100vh;
+  background: #f8f9fb;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Card Container */
+.update-card {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* Heading */
+.update-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Layout */
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Labels */
+.update-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+.update-form input[type="text"],
+.update-form input[type="number"],
+.update-form input[type="file"],
+.update-form select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  transition: 0.3s ease;
+  font-size: 14px;
+  background: white;
+}
+
+/* Input Focus */
+.update-form input:focus,
+.update-form select:focus {
+  border-color: #3CB371;
+  box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.15);
+}
+
+/* Button */
+.update-btn {
+  background: #3CB371;
+  color: white;
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.update-btn:hover {
+  background: black;
+}
+
+/* Back Button */
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #3CB371;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .update-card {
+    padding: 25px;
+  }
+
+  .update-card h2 {
+    font-size: 22px;
+  }
+}

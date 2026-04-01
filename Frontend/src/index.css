@@ -1,0 +1,37 @@
+/* GLOBAL VARIABLES */
+:root{
+  --primary-color: #3CB371;
+  --secondary-color: #EFEFEF;
+  --white: #FFFFFF;
+  --text: #767676;
+  --heading: #161920;
+  --primary-hover: #161922;
+  --text-hover: #585B6F;
+  --text-two: #535B5F;
+  --bg: #222222;
+  --gray: #F7F5F2;
+
+  --border: rgba(118, 118, 118, .3);
+
+  --font-heading: "Montez", cursive;
+  --font-body: "Manrope";
+
+  --transition: all .35s ease;
+}
+
+/* RESET & BASE */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font-body);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+}

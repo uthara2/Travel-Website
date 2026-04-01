@@ -1,0 +1,43 @@
+.tour-package-card{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.tour-package-card:hover{
+  transform:translateY(-6px);
+}
+
+.tour-package-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:18px;
+}
+
+.card-content h4{
+  font-size:20px;
+  margin-bottom:6px;
+}
+
+.destination{
+  color:#666;
+  font-size:14px;
+}
+
+.duration{
+  font-size:14px;
+  margin-top:4px;
+}
+
+.price{
+  margin-top:10px;
+  font-weight:600;
+  font-size:18px;
+  color:#3cb173;
+}

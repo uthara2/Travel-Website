@@ -1,0 +1,92 @@
+.follow-instagram-section {
+    width: 120%;
+    position: relative;
+    left: -10%;
+}
+
+.section-title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.section-title:after {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    content: "";
+    position: absolute;
+    z-index: -5;
+    background: #7676764d;
+}
+
+.section-title span {
+    font-size: 36px;
+    font-family: "Manrope";
+    font-weight: 700;
+    color: #161920;
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.follow-instagram-card {
+    position: relative;
+    z-index: 1;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.follow-instagram-card img {
+    border-radius: 18px;
+    width: 100%;
+    transition: all .35s ease;
+}
+
+
+.follow-instagram-card .instagram-btn {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #3CB371;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    transition: all .35s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.follow-instagram-card:after {
+    border-radius: 18px;
+    background: #1619204d;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s ease;
+}
+
+.follow-instagram-card:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+
+.follow-instagram-card:hover .instagram-btn{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,147 @@
+.trip-section {
+    position: relative;
+    z-index: 1;
+}
+
+.trolley-img {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: -2;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{ transform: translateY(-50%) translateY(0px); }
+    50%{ transform: translateY(-50%) translateY(-15px); }
+    100%{ transform: translateY(-50%) translateY(0px); }
+}
+
+.plane-img{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    z-index: -2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.divider {
+    width: 100%;
+    display: block;
+    height: 120px;
+}
+
+.delay-02 { animation-delay: 0.2s; }
+
+.trip-card {
+   
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+    border-radius: 18px;
+    background: #EFEFEF;
+    transition: all .35s ease;
+}
+
+.trip-card img {
+    border-radius: 18px 18px 0 0;
+    height: 250px;        /* Set fixed height */
+    object-fit: cover;
+    width: 100%;
+}
+
+.trip-card .trip-body {
+    padding: 28px 24px;
+}
+
+.trip-title{
+    transition: all .35s ease;
+}
+
+.trip-title:hover{
+    color: #3CB371;
+}
+
+.line {
+    width: 1px;
+    height: 85px;
+    background: rgba(118, 118, 118, .3);
+    flex-shrink: 0;
+}
+
+.trip-price span {
+    font-size: 12px;
+    color: #767676;
+    text-decoration: line-through;
+}
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px 24px;
+    gap: 6px;
+    border-radius: 5rem;
+    border: 0;
+    font-weight: 700;
+    position: relative;
+    height: 48px;
+    min-width: auto;
+    text-transform: capitalize;
+    overflow: hidden;
+    transition: all .35s ease;
+    margin-top: 30px;
+}
+
+.btn-light{
+    background-color: white;
+    color: black;
+}
+
+.btn-light:hover{
+    background-color: #3CB371;
+    color: white;
+}
+
+.trip-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.trip-card:hover {
+  transform: translateY(-6px);
+}
+
+.trip-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.trip-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 🔥 FORCE BOOTSTRAP GRID BACK */
+.col-12 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    width: 33.3333% !important;
+  }
+}

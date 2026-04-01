@@ -1,0 +1,149 @@
+/* Page Wrapper */
+.create-page {
+  min-height: 100vh;
+  background: #f8f9fb;
+  padding: 30px 20px; /* fixed typo */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Card Container */
+.create-card {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* Heading */
+.create-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Layout */
+.create-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Full width fields */
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.create-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+.create-form input[type="text"],
+.create-form input[type="number"],
+.create-form input[type="file"],
+.create-form select,
+.create-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  transition: 0.3s ease;
+  font-size: 14px;
+  background: white;
+}
+
+/* Textarea */
+.create-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Input Focus */
+.create-form input:focus,
+.create-form select:focus,
+.create-form textarea:focus {
+  border-color: #3CB371;
+  box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.15);
+}
+
+/* Submit Button */
+.create-btn {
+  grid-column: 1 / -1;
+  background: #3CB371;
+  color: white;
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.create-btn:hover {
+  background: black;
+}
+
+/* Back Button */
+.back-btn {
+  background: #3CB371;
+  padding: 14px 30px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .create-form {
+    grid-template-columns: 1fr;
+  }
+
+  .create-card {
+    padding: 25px;
+  }
+
+  .create-card h2 {
+    font-size: 22px;
+  }
+}
+
+
+.other-btn {
+  background-color: #3CB371;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+  margin-top: 8px;
+}
+
+.other-btn:hover {
+  background-color: black;
+  transform: translateY(-1px);
+}
+
+.other-btn:active {
+  transform: scale(0.97);
+}
