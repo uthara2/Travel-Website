@@ -74,13 +74,13 @@ const AdminPanel = () => {
       />
     ),
 
-    district: (
-      <AdminDistrict
-        setActivePage={setActivePage} 
-        setEditId={setEditId}
-      />
-    ),
-    createDistrict: <CreateDistrict setActivePage={setActivePage} />,
+    // district: (
+    //   <AdminDistrict
+    //     setActivePage={setActivePage} 
+    //     setEditId={setEditId}
+    //   />
+    // ),
+    // createDistrict: <CreateDistrict setActivePage={setActivePage} />,
     
     enquiries: <AdminEnquiries />,
   };
@@ -110,10 +110,10 @@ const AdminPanel = () => {
             <FaBox />
             Tour Packages
           </li>
-          <li className={activePage === "district" ? "active" : ""} onClick={() => setActivePage("district")}>
+          {/* <li className={activePage === "district" ? "active" : ""} onClick={() => setActivePage("district")}>
             <FaLandmark />
             District
-          </li>
+          </li> */}
           <li className={activePage === "enquiries" ? "active" : ""} onClick={() => setActivePage("enquiries")}>
             <FaQuestion />
             Enquiries
