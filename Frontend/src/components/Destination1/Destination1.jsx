@@ -9,7 +9,7 @@ const Destination1 = () => {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/categories")
+    axios.get("https://travel-website-lm4n.onrender.com/api/categories")
       .then(res => {
         setCategories(res.data.data)
       })

@@ -19,7 +19,7 @@ const CreateCategory = ({ setActivePage }) => {
     data.append("image", image);
 
     try {
-      await axios.post("http://localhost:5000/api/categories", data, {
+      await axios.post("https://travel-website-lm4n.onrender.com/api/categories", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

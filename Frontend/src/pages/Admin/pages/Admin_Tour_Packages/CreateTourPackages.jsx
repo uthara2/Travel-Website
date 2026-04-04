@@ -94,7 +94,7 @@ const CreateTourPackages = ({ setActivePage }) => {
     data.append("exclusions", JSON.stringify(exclusions));
 
     await axios.post(
-      "http://localhost:5000/api/packages/create",
+      "https://travel-website-lm4n.onrender.com/api/packages/create",
       data,
       { headers: { "Content-Type": "multipart/form-data" } }
     );

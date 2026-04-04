@@ -19,7 +19,8 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cors({
-  origin: "*"
+  origin: "https://touriatravel.vercel.app",
+  credentials: true,
 }));
 
 /* ================= MongoDB ================= */

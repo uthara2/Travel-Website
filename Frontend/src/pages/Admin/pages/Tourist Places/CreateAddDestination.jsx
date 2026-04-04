@@ -46,7 +46,7 @@ const CreateAddDestination = ({ setActivePage }) => {
 
   const fetchCategories = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/categories");
+    const res = await axios.get("https://travel-website-lm4n.onrender.com/api/categories");
 
     // categories are inside data
     setCategories(res.data.data);
@@ -126,7 +126,7 @@ const CreateAddDestination = ({ setActivePage }) => {
     data.append("notIncluded", JSON.stringify(notIncluded));
 
     try {
-      await axios.post("http://localhost:5000/api/destinations", data, {
+      await axios.post("https://travel-website-lm4n.onrender.com/api/destinations", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

@@ -16,7 +16,7 @@ const PackageDetails = () => {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/packages/${id}`
+        `https://travel-website-lm4n.onrender.com/packages/${id}`
       );
 
       setPkg(res.data);

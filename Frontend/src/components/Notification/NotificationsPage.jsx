@@ -19,7 +19,7 @@ const NotificationsPage = () => {
   const fetchNotifications = async (userId) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/taxi/notifications/${userId}`
+        `https://travel-website-lm4n.onrender.com/api/taxi/notifications/${userId}`
       );
       setNotifications(res.data);
     } catch (err) {
@@ -30,7 +30,7 @@ const NotificationsPage = () => {
   const markAsRead = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/taxi/notifications/${id}`
+        `https://travel-website-lm4n.onrender.com/api/taxi/notifications/${id}`
       );
 
       setNotifications((prev) =>
@@ -46,7 +46,7 @@ const NotificationsPage = () => {
   const deleteNotification = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/taxi/notifications/${id}`
+        `https://travel-website-lm4n.onrender.com/api/taxi/notifications/${id}`
       );
 
       setNotifications((prev) =>

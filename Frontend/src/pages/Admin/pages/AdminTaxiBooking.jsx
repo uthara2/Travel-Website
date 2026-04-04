@@ -10,7 +10,7 @@ const AdminTaxiBooking = ({ setActivePage, setEditId }) => {
   const fetchBookings = async () => {
     try {
 
-      const res = await axios.get("http://localhost:5000/api/taxi/taxi-bookings");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/taxi/taxi-bookings");
 
       setBookings(res.data.data);
 
@@ -27,7 +27,7 @@ const AdminTaxiBooking = ({ setActivePage, setEditId }) => {
 
     try {
 
-      await axios.put(`http://localhost:5000/api/taxi/update-status/${id}`, { status });
+      await axios.put(`https://travel-website-lm4n.onrender.com/api/taxi/update-status/${id}`, { status });
 
       fetchBookings();
 
@@ -42,7 +42,7 @@ const AdminTaxiBooking = ({ setActivePage, setEditId }) => {
 
     try {
 
-      await axios.delete(`http://localhost:5000/api/taxi/delete-booking/${id}`);
+      await axios.delete(`https://travel-website-lm4n.onrender.com/api/taxi/delete-booking/${id}`);
 
       fetchBookings();
 

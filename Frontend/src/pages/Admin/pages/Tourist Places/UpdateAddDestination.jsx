@@ -53,7 +53,7 @@ const UpdateAddDestination = ({ editId, setActivePage }) => {
 
   const fetchCategories = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/categories");
+    const res = await axios.get("https://travel-website-lm4n.onrender.com/api/categories");
 
     const cats = res.data.data || []; // <-- correct key
 
@@ -72,7 +72,7 @@ const UpdateAddDestination = ({ editId, setActivePage }) => {
 
   const fetchDestination = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/destinations/${editId}`);
+      const res = await axios.get(`https://travel-website-lm4n.onrender.com/api/destinations/${editId}`);
       const data = res.data;
 
       const nightsMatch = data.duration?.match(/\d+/);
@@ -171,7 +171,7 @@ const UpdateAddDestination = ({ editId, setActivePage }) => {
       data.append("notIncluded", JSON.stringify(notIncluded));
 
       await axios.put(
-        `http://localhost:5000/api/destinations/${editId}`,
+        `https://travel-website-lm4n.onrender.com/api/destinations/${editId}`,
         data,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

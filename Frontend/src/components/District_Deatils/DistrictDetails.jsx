@@ -12,7 +12,7 @@ const DistrictDetails = () => {
     const fetchPlaces = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/destinations/district/${id}`
+          `https://travel-website-lm4n.onrender.com/api/destinations/district/${id}`
         );
         setPlaces(res.data);
       } catch (error) {

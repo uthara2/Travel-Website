@@ -31,7 +31,7 @@ const UpdateTourPackage = ({ editId, setActivePage }) => {
   const fetchPackage = async () => {
 
     const res = await axios.get(
-      `http://localhost:5000/api/packages/${editId}`
+      `https://travel-website-lm4n.onrender.com/api/packages/${editId}`
     );
 
     const data = res.data;
@@ -147,7 +147,7 @@ const UpdateTourPackage = ({ editId, setActivePage }) => {
     data.append("exclusions", JSON.stringify(exclusions));
 
     await axios.put(
-      `http://localhost:5000/api/packages/${editId}`,
+      `https://travel-website-lm4n.onrender.com/api/packages/${editId}`,
       data,
       { headers: { "Content-Type": "multipart/form-data" } }
     );

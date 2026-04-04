@@ -26,7 +26,7 @@ const NavigationBar = () => {
 
     const fetchUnreadCount = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/taxi/notifications/${user._id}`);
+        const res = await axios.get(`https://travel-website-lm4n.onrender.com/api/taxi/notifications/${user._id}`);
         const unread = res.data.filter((n) => !n.read).length;
         setUnreadCount(unread);
       } catch (err) {

@@ -22,7 +22,7 @@ const Signup = () => {
         e.preventDefault();
 
         try {
-            await axios.post("http://localhost:5000/api/auth/signup", formData);
+            await axios.post("https://travel-website-lm4n.onrender.com/api/auth/signup", formData);
             alert("Signup successful");
             navigate("/login")
         } 

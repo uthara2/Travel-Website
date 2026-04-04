@@ -42,7 +42,7 @@ const AdminAddDistrict = ({ setActivePage }) => {
 
     try {
 
-      await axios.post("http://localhost:5000/api/districts", data, {
+      await axios.post("https://travel-website-lm4n.onrender.com/api/districts", data, {
         headers: {
           "Content-Type": "multipart/form-data"
         }

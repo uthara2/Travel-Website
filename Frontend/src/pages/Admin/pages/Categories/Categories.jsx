@@ -12,7 +12,7 @@ const Categories = ({ setActivePage, setEditId }) => {
 
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/categories");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/categories");
       setCategories(res.data.data);
     } catch (error) {
       console.log(error);
@@ -23,7 +23,7 @@ const Categories = ({ setActivePage, setEditId }) => {
     if (!window.confirm("Delete this category?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/categories/${id}`);
+      await axios.delete(`https://travel-website-lm4n.onrender.com/api/categories/${id}`);
       fetchCategories();
     } catch (error) {
       console.log(error);

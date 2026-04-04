@@ -27,7 +27,7 @@ const Taxi = () => {
                 return;
             }
 
-            const res = await axios.post("http://localhost:5000/api/taxi/book-taxi", { ...formData, userId: user?._id });
+            const res = await axios.post("https://travel-website-lm4n.onrender.com/api/taxi/book-taxi", { ...formData, userId: user?._id });
 
             alert("Taxi booked successfully 🚖")
 

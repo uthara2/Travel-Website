@@ -9,7 +9,7 @@ const AdminEnquiries = () => {
   // Fetch all enquiries
   const fetchEnquiries = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/enquiries/enquiries");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/enquiries/enquiries");
       setEnquiries(res.data.data);
     } catch (error) {
       console.log(error);
@@ -26,7 +26,7 @@ const AdminEnquiries = () => {
     if (!window.confirm("Delete this enquiry?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/enquiries/delete-enquiry/${id}`);
+      await axios.delete(`https://travel-website-lm4n.onrender.com/api/enquiries/delete-enquiry/${id}`);
       fetchEnquiries();
     } catch (error) {
       console.log(error);

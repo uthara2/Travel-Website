@@ -13,7 +13,7 @@ const CategoryPage = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`http://localhost:5000/api/destinations/category/${categoryId}`)
+        axios.get(`https://travel-website-lm4n.onrender.com/api/destinations/category/${categoryId}`)
             .then(res => {
                 setData(res.data)
                 setLoading(false)

@@ -19,7 +19,7 @@ const TourPackages = () => {
   const currentPackages = packages.slice(indexOfFirst, indexOfLast);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/packages")
+    axios.get("https://travel-website-lm4n.onrender.com/api/packages")
       .then(res => {
         setPackages(res.data)
       })

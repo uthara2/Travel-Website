@@ -20,7 +20,7 @@ const Trip = () => {
 
   const fetchTrips = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/destinations");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/destinations");
 
       // ✅ safe shuffle
       const shuffled = [...res.data].sort(() => Math.random() - 0.5);

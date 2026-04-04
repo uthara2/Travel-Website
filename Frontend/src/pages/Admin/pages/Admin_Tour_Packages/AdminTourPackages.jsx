@@ -9,7 +9,7 @@ const AdminTourPackages = ({ setActivePage, setEditId }) => {
   // Fetch all destinations
   const fetchPackages = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/packages");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/packages");
       setPackages(res.data);
     } catch (error) {
       console.error(error);
@@ -24,7 +24,7 @@ const AdminTourPackages = ({ setActivePage, setEditId }) => {
     if (!window.confirm("Delete this package?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/packages/delete/${id}`);
+      await axios.delete(`https://travel-website-lm4n.onrender.com/api/packages/delete/${id}`);
       fetchPackages();
     } 
     catch (error) {

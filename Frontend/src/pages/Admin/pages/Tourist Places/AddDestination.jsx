@@ -12,7 +12,7 @@ const AddDestination = ({ setActivePage, setEditId }) => {
   =============================== */
   const fetchDestinations = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/destinations");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/destinations");
 
       // safety: ensure array
       setDestinations(Array.isArray(res.data) ? res.data : []);
@@ -30,7 +30,7 @@ const AddDestination = ({ setActivePage, setEditId }) => {
   =============================== */
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/categories");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/categories");
 
       // handle both formats
       setCategories(res.data.categories || res.data || []);
@@ -54,7 +54,7 @@ const AddDestination = ({ setActivePage, setEditId }) => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/destinations/${id}`);
+      await axios.delete(`https://travel-website-lm4n.onrender.com/api/destinations/${id}`);
       fetchDestinations();
     } catch (error) {
       console.error("Delete failed:", error);

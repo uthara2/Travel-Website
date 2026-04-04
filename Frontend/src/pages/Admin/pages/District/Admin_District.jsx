@@ -8,7 +8,7 @@ const Admin_District = ({ setActivePage, setEditId }) => {
 
   const fetchDistricts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/districts");
+      const res = await axios.get("https://travel-website-lm4n.onrender.com/api/districts");
       setDistricts(res.data);
     } catch (error) {
       console.log(error);
@@ -21,7 +21,7 @@ const Admin_District = ({ setActivePage, setEditId }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/districts/${id}`);
+      await axios.delete(`https://travel-website-lm4n.onrender.com/api/districts/${id}`);
       fetchDistricts();
     } catch (error) {
       console.log(error);

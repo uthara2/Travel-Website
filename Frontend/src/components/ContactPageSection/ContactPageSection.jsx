@@ -27,7 +27,7 @@ const ContactPageSection = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/enquiries/create-enquiry", formData);
+      await axios.post("https://travel-website-lm4n.onrender.com/api/enquiries/create-enquiry", formData);
       alert("Message sent successfully!");
 
       setFormData({

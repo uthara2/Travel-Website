@@ -8,7 +8,7 @@ const AdminUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/users");
+        const res = await axios.get("https://travel-website-lm4n.onrender.com/api/auth/users");
         setUsers(res.data);
       } catch (err) {
         console.log(err);
