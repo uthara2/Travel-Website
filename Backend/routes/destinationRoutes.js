@@ -15,7 +15,6 @@ router.get("/category/:id", async (req, res) => {
       category: req.params.id,
     })
       .populate("category", "name")
-      .populate("district", "name");
 
     if (destinations.length === 0) {
       return res.json({
@@ -41,10 +40,9 @@ router.get("/category/:id", async (req, res) => {
 router.get("/district/:id", async (req, res) => {
   try {
     const destinations = await Destination.find({
-      district: req.params.id,
+      district: { $regex: new RegExp(`^${req.params.id}$`, "i") }
     })
       .populate("category", "name")
-      .populate("district", "name");
 
     res.json(destinations);
 
@@ -60,7 +58,6 @@ router.get("/", async (req, res) => {
   try {
     const destinations = await Destination.find()
       .populate("category", "name")
-      .populate("district", "name");
 
     res.json(destinations);
 
@@ -77,7 +74,6 @@ router.get("/:id", async (req, res) => {
   try {
     const destination = await Destination.findById(req.params.id)
       .populate("category", "name")
-      .populate("district", "name");
 
     if (!destination) {
       return res.status(404).json({ message: "Destination not found" });
@@ -136,8 +132,7 @@ router.post("/", upload.single("image"), async (req, res) => {
     const saved = await newDestination.save();
 
     const populated = await saved
-      .populate("category", "name")
-      .populate("district", "name"); // ✅ ADDED
+      .populate("category", "name") // ✅ ADDED
 
     res.status(201).json(populated);
 
@@ -192,8 +187,7 @@ router.put("/:id", upload.single("image"), async (req, res) => {
       updatedData,
       { new: true, runValidators: true }
     )
-      .populate("category", "name")
-      .populate("district", "name"); // ✅ ADDED
+      .populate("category", "name") // ✅ ADDED
 
     if (!updated) {
       return res.status(404).json({ message: "Destination not found" });

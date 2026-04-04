@@ -148,3 +148,86 @@
     background-color: black;
     color: #EFEFEF;
 }
+
+@media (max-width: 992px) {
+
+  .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .about-company-section .row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+
+  .about-content {
+    padding-left: 0 !important;
+    text-align: center;
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+
+  .sub-title {
+    font-size: 24px;
+  }
+
+  .first-img {
+    height: 350px;
+  }
+
+  .shape img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .divider {
+    height: 40px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .about-card-sm {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-card-sm .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .about-card-sm .icon::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-card-sm p {
+    font-size: 14px;
+  }
+
+  .first-img {
+    height: 250px;
+  }
+
+  .btn-primary-custom {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}

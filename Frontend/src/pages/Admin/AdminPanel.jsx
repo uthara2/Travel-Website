@@ -3,13 +3,12 @@ import { FaMapMarkedAlt, FaList, FaCar, FaBox, FaLandmark, FaUser, FaQuestion } 
 
 import './AdminPanel.css'
 
-import AddDestination from "./pages/AddDestination";
-import CreateAddDestination from "./pages/CreateAddDestination";
-import UpdateAddDestination from "./pages/UpdateAddDestination";
+import AddDestination from "./pages/Tourist Places/AddDestination";
+import CreateAddDestination from "./pages/Tourist Places/CreateAddDestination";
+import UpdateAddDestination from "./pages/Tourist Places/UpdateAddDestination";
 
-import Categories from './pages/Categories'
-import CreateCategory from "./pages/CreateCategory";
-import UpdateCategory from "./pages/UpdateCategory";
+import Categories from './pages/Categories/Categories'
+import CreateCategory from "./pages/Categories/CreateCategory";
 
 import AdminTaxiBooking from "./pages/AdminTaxiBooking";
 
@@ -44,19 +43,9 @@ const AdminPanel = () => {
       />
     ),
 
-    category: (
-      <Categories
-        setActivePage={setActivePage} 
-        setEditId={setEditId}
-      />
-    ),
+    category: <Categories setActivePage={setActivePage} setEditId={setEditId} /> ,
     createCategory: <CreateCategory setActivePage={setActivePage} />,
-    updateCategory: (
-      <UpdateCategory
-        editId={editId}
-        setActivePage={setActivePage}
-      />
-    ),
+    
 
     taxiBookings: <AdminTaxiBooking />,
 

@@ -23,8 +23,7 @@ const destinationSchema = new mongoose.Schema({
   },
 
   district: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "District",
+    type: String,
     required: true,
   },
 
@@ -32,14 +31,6 @@ const destinationSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category",
     required: true,
-  },
-
-  location: {
-    type: String,
-  },
-
-  country: {
-    type: String,
   },
 
   image: {

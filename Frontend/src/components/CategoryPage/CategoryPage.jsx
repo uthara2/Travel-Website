@@ -68,9 +68,6 @@ const CategoryPage = () => {
                             <div className="empty-icon">🗺️</div>
                             <h3>No Destinations Yet</h3>
                             <p>We're working on adding places in this category. Check back soon!</p>
-                            <button className="back-btn-solid" onClick={() => navigate(-1)}>
-                                Explore Other Categories
-                            </button>
                         </div>
                     )}
 
@@ -94,16 +91,10 @@ const CategoryPage = () => {
                                                             <h4 className="mb-0 text-white">
                                                                 {dest.place}
                                                             </h4>
-                                                            {dest.country && (
-                                                                <p className="text-white-50 small mb-0">
-                                                                    {dest.country}
-                                                                </p>
-                                                            )}
+                                                            <p className="mb-0">{dest.district}</p>
                                                         </div>
 
-                                                        <span className="badge">
-                                                            {data.category?.name}
-                                                        </span>
+                                        
                                                     </div>
                                                 </div>
                                             </Link>

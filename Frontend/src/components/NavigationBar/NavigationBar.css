@@ -1,255 +1,340 @@
-/* NAVBAR BASE */ 
-.app-navbar{ 
-  position: fixed; 
-  top: 25px; 
-  left: 0; 
-  width: 100%; 
-  padding: 10px 0; 
-  z-index: 1000; 
-  display: flex; 
-  justify-content: center; 
-  background-color: transparent; 
-  transition: var(--transition); 
-} 
-
-.app-navbar .container{ 
-  background-color: var(--secondary-color); 
-  padding: 10px 50px; 
-  border-radius: 50px; 
-  box-shadow: 0 2px 20px rgba(0,0,0,0.15); 
-} 
-
-.app-navbar .navbar-collapse { 
-  align-items: center !important; 
-} 
-
-/* NAV LINKS */ 
-.app-navbar .nav-link{ 
-  font-family: var(--font-body); 
-  font-size: 1rem; 
-  font-weight: 500; 
-  color: var(--primary-color) !important; 
-  padding: 8px 16px !important; 
-  position: relative; 
-  transition: color 0.3s ease; 
-} 
-
-.app-navbar .nav-link:hover{ 
-  color: var(--accent-color) !important; 
-} 
-
-.app-navbar .nav-link::after{ 
-  content: ''; 
-  position: absolute; 
-  bottom: 0; 
-  left: 16px; 
-  width: 0; 
-  height: 2px; 
-  background-color: var(--primary-color); 
-  transition: width 0.3s ease; 
-} 
-
-.app-navbar .nav-link:hover::after{ 
-  width: calc(100% - 32px); 
-} 
-
-.app-navbar .nav-link.active{ 
-  color: var(--accent-color) !important; 
-  font-weight: 600; 
-} 
-
-.app-navbar .nav-link.active::after{ 
-  width: calc(100% - 32px); 
-  background-color: var(--primary-color); 
-} 
-
-/* AUTH BUTTONS */ 
-.navbar-auth{ 
-  display: flex; 
-  align-items: center; 
-  gap: 15px; 
-  flex-shrink: 0; 
-} 
-
-.app-navbar .navbar-nav{ 
-  align-items:center; 
-} 
-
-.btn-login{ 
-  font-family: var(--font-body); 
-  font-size: 1rem; 
-  font-weight: 500; 
-  color: var(--primary-color) !important; 
-  border: 2px solid var(--primary-color) !important; 
-  padding: 8px 18px !important; 
-  border-radius:25px !important; 
-  background: transparent !important; 
-  transition: var(--transition) !important; 
-  white-space: nowrap; 
-} 
-
-.btn-login:hover { 
-  border-color: var(--white) !important; 
-  background: var(--primary-color) !important; 
-  color: var(--white) !important; 
-  transform: translateY(-2px); 
-} 
-
- /* ==== MOBILE ==== */ 
- 
- /* Hamburger icon color */ 
- .app-navbar .navbar-toggler { 
-  border-color: rgba(255, 255, 255, 0.5) !important; 
-} 
-
-@media (max-width: 991px) { 
-  .app-navbar .container { 
-    border-radius: 20px; 
-    padding: 10px 20px; 
-  } 
-  
-  .app-navbar .navbar-collapse { 
-    background-color: var(--secondary-color); 
-    padding: 16px; 
-    border-radius: 12px; 
-    margin-top: 12px; 
-    flex-direction: column; 
-    align-items: stretch !important; 
-  } 
-  
-  .app-navbar .navbar-nav { 
-    width: 100%; 
-    align-items: flex-start !important; 
-  } 
-  
-  .app-navbar .nav-link::after { 
-    display: none; 
-  } 
-  
-  .navbar-auth { 
-    flex-direction: row; 
-    padding-top: 12px; 
-    border-top: 1px solid rgba(255, 255, 255, 0.15); 
-    margin-top: 8px; 
-    width: 100%; 
-    justify-content: stretch; 
-    gap: 10px; 
-  } 
-  
-  .navbar-auth .btn-login { 
-    flex: 1; 
-    text-align: center; 
-  } 
-} 
-
-/* Modal */ 
-
-/* Overlay */ 
-.logout-modal-overlay { 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background: rgba(0,0,0,0.6); 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  z-index: 999; 
-} 
-
-/* Modal Box */ 
-.logout-modal-box { 
-  background: #fff; 
-  padding: 25px; 
-  border-radius: 12px; 
-  width: 320px; 
-  text-align: center; 
-  animation: fadeIn 0.3s ease; 
-} 
-
-/* Buttons */ 
-.logout-modal-actions { 
-  display: flex; 
-  justify-content: space-between; 
-  margin-top: 20px; 
-} 
-
-.cancel-btn { 
-  background: #ddd; 
-  border: none; 
-  padding: 8px 15px; 
-  border-radius: 6px; 
-  cursor: pointer; 
-} 
-
-.confirm-logout-btn { 
-  background: var(--primary-color); 
-  color: #fff; 
-  border: none; 
-  padding: 8px 15px; 
-  border-radius: 6px; 
-  cursor: pointer; 
-} 
-
-/* Animation */ 
-@keyframes fadeIn { from 
-  { 
-    opacity: 0; 
-    transform: scale(0.9); 
-  } to { 
-    opacity: 1; 
-    transform: scale(1); 
-  } 
-} 
-
-/* 🔥 Background overlay */ 
-.notification-overlay { 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background: rgba(0,0,0,0.3); 
-  z-index: 2000; 
-  display: flex; 
-  justify-content: flex-end; 
-} 
-
-/* 💎 Main panel */ 
-.notification-panel { 
-  width: 320px; 
-  height: 100%; 
-  background: white; 
-  padding: 20px; 
-  box-shadow: -4px 0 15px rgba(0,0,0,0.2); 
-  overflow-y: auto; 
-  animation: slideIn 0.3s ease; 
-} 
-
-/* ✨ Animation */ 
-@keyframes slideIn { 
-  from { 
-    transform: translateX(100%); 
-  } 
-  to { 
-    transform: translateX(0); 
-  } 
-} 
-
-/* Items */ 
-.notification-item.unread { 
-  font-weight: bold; 
-  background: #f5f7ff; 
+/* ========================
+   NAVBAR BASE
+   ======================== */
+.app-navbar {
+  position: fixed;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  padding: 10px 16px; /* FIX: horizontal padding on the navbar itself, not just container */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  transition: var(--transition);
+  box-sizing: border-box;
 }
 
-.notification-item {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+.app-navbar .container {
+  background-color: var(--secondary-color);
+  padding: 10px 50px;
+  border-radius: 50px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;          /* FIX: let it fill the padded navbar width */
+  max-width: 100%;      /* FIX: override Bootstrap's max-width capping */
+}
+
+.app-navbar .navbar-collapse {
+  align-items: center !important;
+}
+
+/* ========================
+   LOGO
+   ======================== */
+.navbar-logo img {
+  height: 40px;
+  width: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  object-fit: contain;
+}
+
+/* ========================
+   NAV LINKS
+   ======================== */
+.app-navbar .nav-link {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color) !important;
+  padding: 8px 16px !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.app-navbar .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.app-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.app-navbar .nav-link:hover::after {
+  width: calc(100% - 32px);
+}
+
+.app-navbar .nav-link.active {
+  color: var(--accent-color) !important;
+  font-weight: 600;
+}
+
+.app-navbar .nav-link.active::after {
+  width: calc(100% - 32px);
+  background-color: var(--primary-color);
+}
+
+/* ========================
+   RIGHT SECTION (bell + auth)
+   ======================== */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  padding-left: 20px;
+}
+
+/* ========================
+   AUTH BUTTONS
+   ======================== */
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.app-navbar .navbar-nav {
+  align-items: center;
+}
+
+.navbar-user {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.btn-login {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color) !important;
+  padding: 8px 18px !important;
+  border-radius: 25px !important;
+  background: transparent !important;
+  transition: var(--transition) !important;
+  white-space: nowrap;
+}
+
+.btn-login:hover {
+  border-color: var(--white) !important;
+  background: var(--primary-color) !important;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+}
+
+/* ========================
+   NOTIFICATION BELL
+   ======================== */
+.bell-icon {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.bell-icon:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.bell-icon .badge {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 0.65rem;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ========================
+   TABLET (992px – 1199px)
+   ======================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .app-navbar .container {
+    padding: 10px 24px;
+    border-radius: 40px;
+  }
+
+  .navbar-logo img {
+    height: 36px;
+  }
+
+  .app-navbar .nav-link {
+    font-size: 0.88rem;
+    padding: 8px 10px !important;
+  }
+}
+
+/* ========================
+   MOBILE (≤991px)
+   ======================== */
+.app-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (max-width: 991px) {
+  .app-navbar {
+    top: 12px;
+    padding: 10px 14px; /* FIX: this is what creates the gap on left AND right */
+  }
+
+  .app-navbar .container {
+    border-radius: 20px;
+    padding: 10px 16px;
+    width: 100%;
+    max-width: 100%;    /* FIX: must override Bootstrap or right side gets clipped */
+  }
+
+  .app-navbar .navbar-collapse {
+    background-color: var(--secondary-color);
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 12px;
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .app-navbar .navbar-nav {
+    width: 100%;
+    align-items: flex-start !important;
+  }
+
+  .app-navbar .nav-link::after {
+    display: none;
+  }
+
+  .navbar-right {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-top: 12px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    width: 100%;
+  }
+
+  .navbar-auth {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .navbar-auth .btn-login {
+    flex: 1;
+    text-align: center;
+  }
+
+  .bell-icon {
+    font-size: 1.4rem;
+    padding: 6px;
+  }
+}
+
+/* ========================
+   SMALL MOBILE (≤480px)
+   ======================== */
+@media (max-width: 480px) {
+  .app-navbar {
+    padding: 10px 12px; /* FIX: consistent breathing room on small phones */
+  }
+
+  .app-navbar .container {
+    padding: 8px 14px;
+  }
+
+  .navbar-logo img {
+    height: 34px;
+  }
+}
+
+/* ========================
+   LOGOUT MODAL
+   ======================== */
+.logout-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.logout-modal-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.logout-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background: #ddd;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.notification-item:hover {
-  background: #f0f4ff;
+.cancel-btn:hover {
+  background: #c5c5c5;
+}
+
+.confirm-logout-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.confirm-logout-btn:hover {
+  opacity: 0.85;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

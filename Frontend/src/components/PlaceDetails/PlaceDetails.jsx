@@ -52,7 +52,7 @@ const PlaceDetails = () => {
       </h1>
 
       <p className="hero-location">
-        {destination.location}, {destination.country}
+        {destination.district}
       </p>
 
       <div className="hero-price">
@@ -79,15 +79,16 @@ const PlaceDetails = () => {
             </div>
 
             <div>
-              <strong>Category</strong>
-              <p>{destination.category?.name}</p>
+              <strong>Stay</strong>
+              <p>{destination.stay}</p>
             </div>
 
             <div>
-              <strong>Country</strong>
-              <p>{destination.country}</p>
+              <strong>Transport</strong>
+              <p>{destination.transport}</p>
             </div>
           </div>
+
         </section>
 
         {/* ITINERARY */}
