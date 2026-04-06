@@ -13,6 +13,10 @@ const AdminTourPackages = ({ setActivePage, setEditId }) => {
   const indexOfFirst = indexOfLast - itemsPerPage;
 
   const currentPackages = packages.slice(indexOfFirst, indexOfLast);
+
+  console.log("Total:", packages.length);
+console.log("Current Page:", currentPage);
+console.log("Showing:", currentPackages.length);
   
 
   // Fetch all destinations
