@@ -66,7 +66,7 @@ const PackageDetails = () => {
           </p>
 
           <div className="hero-price">
-            ₹{pkg.price} per person
+            ₹{pkg.price}
             <span
               style={{
                 color:"#3cb173",

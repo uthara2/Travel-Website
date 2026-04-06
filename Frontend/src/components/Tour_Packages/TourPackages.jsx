@@ -80,7 +80,7 @@ const TourPackages = () => {
                     </p>
 
                     <div className="price">
-                      ₹{pkg.price}
+                      ₹{pkg.price} per person
                     </div>
 
                   </div>
