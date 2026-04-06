@@ -16,7 +16,7 @@ const PackageDetails = () => {
     try {
 
       const res = await axios.get(
-        `https://travel-website-lm4n.onrender.com/packages/${id}`
+        `https://travel-website-lm4n.onrender.com/api/packages/${id}`
       );
       console.log("ID:", id);
 
