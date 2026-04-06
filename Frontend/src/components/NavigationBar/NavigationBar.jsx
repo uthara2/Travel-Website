@@ -69,7 +69,7 @@ const NavigationBar = () => {
             <Nav className="mx-auto align-items-center flex-grow-1 justify-content-center">
               <Nav.Link as={NavLink} to="/">Home</Nav.Link>
               <Nav.Link as={NavLink} to="/destinations">Destinations</Nav.Link>
-              <Nav.Link as={NavLink} to="/tourPackages">Tour Packages</Nav.Link>
+              <Nav.Link as={NavLink} to="/packages">Tour Packages</Nav.Link>
               <Nav.Link as={NavLink} to="/taxiBooking">Taxi Booking</Nav.Link>
               <Nav.Link as={NavLink} to="/about">About</Nav.Link>
               <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
