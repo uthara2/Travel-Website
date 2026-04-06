@@ -69,7 +69,7 @@ const AdminTourPackages = ({ setActivePage, setEditId }) => {
           </thead>
 
           <tbody>
-            {packages.map((item) => (
+            {currentPackages.map((item) => (
               <tr key={item._id}>
                 <td>
                   {item.image && (
@@ -106,15 +106,17 @@ const AdminTourPackages = ({ setActivePage, setEditId }) => {
               </tr>
             ))}
 
-            <Pagination
+            
+          </tbody>
+        </table>
+
+        <Pagination
               totalItems={packages.length}
               itemsPerPage={itemsPerPage}
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
           />
           
-          </tbody>
-        </table>
       </div>
     </div>
   )
