@@ -1,9 +1,18 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/AddDestination.css";
+import Pagination from "../../../../components/Pagination/Pagination";
 
 const AdminTourPackages = ({ setActivePage, setEditId }) => {
   const [packages, setPackages] = useState([]);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  const indexOfLast = currentPage * itemsPerPage;
+  const indexOfFirst = indexOfLast - itemsPerPage;
+
+  const currentPackages = packages.slice(indexOfFirst, indexOfLast);
   
 
   // Fetch all destinations
@@ -96,6 +105,14 @@ const AdminTourPackages = ({ setActivePage, setEditId }) => {
                 </td>
               </tr>
             ))}
+
+            <Pagination
+              totalItems={packages.length}
+              itemsPerPage={itemsPerPage}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+          />
+          
           </tbody>
         </table>
       </div>
