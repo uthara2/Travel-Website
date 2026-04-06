@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/AddDestination.css";
+import Pagination from "../../../../components/Pagination/Pagination";
+
 
 const AddDestination = ({ setActivePage, setEditId }) => {
   const [destinations, setDestinations] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  const indexOfLast = currentPage * itemsPerPage;
+  const indexOfFirst = indexOfLast - itemsPerPage;
+
+  const currentDestinations = destinations.slice(indexOfFirst, indexOfLast);
 
   /* ===============================
      FETCH DESTINATIONS
@@ -103,7 +113,7 @@ const AddDestination = ({ setActivePage, setEditId }) => {
     </thead>
 
     <tbody>
-      {destinations.map((item) => (
+      {currentDestinations.map((item) => (
         <tr key={item._id}>
           <td>{item.image ? <img src={item.image} alt={item.place} /> : "No Image"}</td>
           <td>{item.place}</td>
@@ -130,6 +140,13 @@ const AddDestination = ({ setActivePage, setEditId }) => {
       ))}
     </tbody>
   </table>
+
+  <Pagination
+              totalItems={destinations.length}
+              itemsPerPage={itemsPerPage}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+          />
 </div>
       )}
     </div>
