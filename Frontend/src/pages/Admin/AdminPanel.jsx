@@ -16,9 +16,6 @@ import AdminTourPackages from "./pages/Admin_Tour_Packages/AdminTourPackages";
 import CreateTourPackages from "./pages/Admin_Tour_Packages/CreateTourPackages";
 import UpdateTourPackages from "./pages/Admin_Tour_Packages/UpdateTourPackages";
 
-import AdminDistrict from "./pages/District/Admin_District";
-import CreateDistrict from './pages/District/Admin_AddDistrict';
-
 import AdminUsers from "./pages/AdminUsers";
 import AdminEnquiries from "./pages/AdminEnquiries";
 
