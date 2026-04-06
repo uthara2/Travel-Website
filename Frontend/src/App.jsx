@@ -41,7 +41,7 @@ function App() {
           <Route path="/destination/:id" element={<PlaceDetails/>} />
           <Route path="/packages/:id" element={<PackageDetails />} />
 
-          <Route path="/" element={<District />} />
+          <Route path="/district" element={<District />} />
           <Route path="/district/:id" element={<DistrictDetails />} />
           <Route path="/destination/:id" element={<PlaceDetails />} />
         </Routes>
