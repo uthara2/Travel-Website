@@ -18,6 +18,7 @@ const PackageDetails = () => {
       const res = await axios.get(
         `https://travel-website-lm4n.onrender.com/packages/${id}`
       );
+      console.log("ID:", id);
 
       setPkg(res.data);
 

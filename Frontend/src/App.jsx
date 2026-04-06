@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/destinations' element={<Destinations />} /> 
-          <Route path="/tourPackages" element={<Packages />} />
+          <Route path="/packages" element={<Packages />} />
           <Route path="/taxiBooking" element={<TaxiBooking />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/contact' element={<Contact />} />
@@ -39,7 +39,7 @@ function App() {
 
           <Route path="/category/:categoryId" element={<CategoryPage />} />
           <Route path="/destination/:id" element={<PlaceDetails/>} />
-          <Route path="/tour-package/:id" element={<PackageDetails />} />
+          <Route path="/packages/:id" element={<PackageDetails />} />
 
           <Route path="/" element={<District />} />
           <Route path="/district/:id" element={<DistrictDetails />} />

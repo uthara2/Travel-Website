@@ -59,7 +59,7 @@ const TourPackages = () => {
             <div key={pkg._id} className="col-12 col-sm-6 col-lg-4">
 
               <Link
-                to={`/tour-package/${pkg._id}`}
+                to={`/packages/${pkg._id}`}
                 style={{ textDecoration: "none" }}
               >
 
